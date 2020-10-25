@@ -7,7 +7,64 @@
     "start": "cross-env NODE_ENV=development electron .",
     "dev": "rollup -cw",
     "build": "rollup -c",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "package": "npm run build && electron-builder build",
+    "package-all": "npm run build && electron-builder build -mwl",
+    "package-linux": "npm run build && electron-builder build --linux",
+    "package-win": "npm run build && electron-builder build --win --x64"
+  },
+  "build": {
+    "productName": "My Cool Software",
+    "appId": "io.github.nateshmbhat.sampleSvelteProject",
+    "extraResources": [
+      {
+        "from": "static",
+        "to": "static"
+      }
+    ],
+    "extraFiles": [
+      {
+        "from": "resources/icon.ico",
+        "to": "resources/icon.ico"
+      }
+    ],
+    "files": [
+      "node_modules/",
+      "public/",
+      "public/build",
+      "package.json"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -20,7 +77,10 @@
     "svelte electron template",
     "electron svelte"
   ],
-  "author": "nateshmbhat",
+  "author": {
+    "name" : "nateshmbhat",
+    "email": "nateshmbhatofficial@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.1.0",

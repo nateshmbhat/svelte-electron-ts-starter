@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./assets/logo.png" align="center">
+<img src="./resources/icon.png" align="center">
 </p>
 
 <h1 align="center">svelte-electron-ts-starter</h1>
