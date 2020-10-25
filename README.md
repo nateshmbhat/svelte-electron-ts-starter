@@ -12,7 +12,7 @@ This is a boiler plate starter pack when starting an electron project which uses
 - Fast Auto reload of electron app when source files change.⚡
 - Typescript support for both `main` electron process and `renderer` processes 🥳🥳
 - Provides the required npm scripts and folder structure for simple to complex projects.
-- Hassle free package process 📦
+- Hassle free package process 📦 to package your cool app for `mac` , `linux` and `windows`
 
 ## Developing
 
