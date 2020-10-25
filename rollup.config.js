@@ -22,8 +22,6 @@ export default [{
 		json(),
 		typescript()
 	],
-	experimentalCodeSplitting: true,
-	experimentalDynamicImport: true,
 	external: [
 		'electron',
 		'child_process',
