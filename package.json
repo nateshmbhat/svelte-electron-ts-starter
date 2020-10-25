@@ -2,7 +2,7 @@
   "name": "template-electron",
   "version": "0.0.1",
   "description": "A template for building Electron apps with Svelte",
-  "main": "dist/main.js",
+  "main": "public/build/main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development electron .",
     "dev": "rollup -cw",
@@ -27,6 +27,7 @@
     "@tsconfig/svelte": "^1.0.10",
     "electron": "^10.1.5",
     "electron-builder": "^22.9.1",
+    "electron-reload": "^1.5.0",
     "rollup": "^2.32.1",
     "rollup-plugin-svelte": "^6.1.0",
     "svelte": "^3.0.0",
@@ -36,7 +37,6 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
-    "chokidar": "^2.0.3",
     "cross-env": "^5.1.6"
   }
 }

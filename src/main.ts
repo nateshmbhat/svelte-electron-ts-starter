@@ -7,18 +7,7 @@ import { app, BrowserWindow } from 'electron';
 let win;
 
 const mode = process.env.NODE_ENV;
-
-function reloadOnChange(win) {
-	if (mode !== 'development') return { close: () => {} };
-
-	const watcher = require('chokidar').watch(path.join(__dirname, '**'), { ignoreInitial: true });
-
-	watcher.on('change', () => {
-		win.reload();
-	});
-
-	return watcher;
-}
+require('electron-reload')(__dirname);
 
 function launch() {
 	win = new BrowserWindow({
@@ -26,22 +15,22 @@ function launch() {
 		height: 600,
 		minWidth: 600,
 		backgroundColor: 'white',
-		titleBarStyle: 'hidden'
+		titleBarStyle: 'hidden',
+		webPreferences:{
+			nodeIntegration:true
+		}
 	});
 
 	win.loadURL(
 		url.format({
-			pathname: path.join(__dirname, '../static/index.html'),
+			pathname: path.join(__dirname, '../index.html'),
 			protocol: 'file:',
 			slashes: true
 		})
 	);
 
-	const watcher = reloadOnChange(win);
-
 	win.on('closed', function() {
 		win = null;
-		watcher.close();
 	});
 }
 
