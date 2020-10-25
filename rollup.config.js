@@ -5,7 +5,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 
 export default [{
-	input: ['src/main.ts', 'src/renderer.ts'],
+	input: ['app/main.ts', 'app/renderer.ts'],
 	output: {
 		dir: 'public/build',
 		format: 'cjs',
