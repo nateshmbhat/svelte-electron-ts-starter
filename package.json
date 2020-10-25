@@ -1,5 +1,5 @@
 {
-  "name": "template-electron",
+  "name": "svelte-electron-ts-starter",
   "version": "0.0.1",
   "description": "A template for building Electron apps with Svelte",
   "main": "public/build/main.js",
@@ -14,11 +14,14 @@
     "Electron",
     "quick",
     "start",
-    "tutorial",
-    "demo"
+    "svelte",
+    "starter",
+    "svelte electron",
+    "svelte electron template",
+    "electron svelte"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "nateshmbhat",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-json": "^4.1.0",

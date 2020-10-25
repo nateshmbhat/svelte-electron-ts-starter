@@ -1,6 +1,12 @@
-# template-electron
+# svelte-electron-ts-starter
 
-A simple boilerplate for building Electron apps with Svelte.
+This is a boiler plate starter pack when starting an electron project which uses svelte with typescript
+
+### Why this starter pack : 
+ + Packed with latest svelte and rollup plugin configurations 📦
++ Fast Auto reload of electron app when source files change.⚡
++ Typescript support for both `main` electron process and `renderer` processes 🥳🥳
++ Provides the required npm scripts and folder structure for simple to complex projects.
 
 
 ## Developing
@@ -15,4 +21,4 @@ Clone the repo, and install dependencies with `npm install`. Then `npm run dev` 
 
 ## License
 
-[LIL](LICENSE)
+[MIT](LICENSE)
